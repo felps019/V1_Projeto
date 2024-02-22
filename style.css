@@ -74,14 +74,19 @@ body * {
   border-radius: 50%; /*arredondamento de borda*/
   position: absolute;
   top: 50%;
-  right: 0;
   z-index: 1;
+  left: 0;
   transform: translateY(-50%);
+  animation: slide-back 0.4s;
 }
 
 .light #switch button {
-  left: 0;
-  right: initial;
+  left: 50%;
+  animation: slide-in 0.4s forwards;/* forwards mantem as propriedades do slide in*/
+}
+
+#switch button:hover{
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -170,3 +175,21 @@ footer {
   }
 }
 
+/* animation */
+@keyframes slide-in {   /*entrada e saida da animação*/
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back{
+  from{
+    left: 50%;
+  }
+  to{
+    left: 0;
+  }
+}
