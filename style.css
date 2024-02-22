@@ -36,8 +36,8 @@ body * {
   color: var(--text-color);
 }
 #container {
-  width: 360px; /*Dica: Usar uma borda para quando for alinhar algo para ver as mudanças*/
-  height: 280px;
+  width: 100%; /*Dica: Usar uma borda para quando for alinhar algo para ver as mudanças*/
+  max-width: 588px;
   margin: 56px auto 0px;
   display: flex;
   justify-content: center;
